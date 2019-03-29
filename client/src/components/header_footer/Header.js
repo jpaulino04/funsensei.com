@@ -3,18 +3,32 @@ import {Link} from "react-router-dom";
 
 function Header() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-info">
-      <a className="navbar-brand" href="#">J P A U L I N O</a>
-      <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span className="navbar-toggler-icon"></span>
-    </button>
-    <div className="collapse navbar-collapse " id="navbarNavAltMarkup">
-      <div className="navbar-nav ml-auto">
-        <Link className="nav-item nav-link ml-auto" to="/">Home <span className="sr-only">(current)</span></Link>   
-        <Link className="nav-item nav-link ml-auto" to="#">About <span className="sr-only">(current)</span></Link>   
-      </div>
-  </div>
-</nav>   
+    // <!-- style="background-color: #e3f2fd;" -->
+  <nav className="navbar navbar-expand-md navbar-dark fixed-top  bg-dark " >
+    <div class="container">
+        <a href="/" className="navbar-brand ">
+          <span width="50" height="50"><h3 className="d-inline align-middle brand text-white" style={{letterSpacing: "3px;"}}> FunSenSei </h3></span>
+        </a>
+        <button className="navbar-toggler" data-toggle="collapse" data-target="#navbarNav">
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarNav">
+            <ul className="navbar-nav ml-auto">
+              <li className="nav-item text-white">
+                <Link to="/" className="nav-link">
+                  <i className="fas fa-home"></i> Home
+                </Link>
+              </li>
+              <li className="nav-item text-white">
+                <Link to="/" className="nav-link">
+                  <i className="fas fa-home"></i> About
+                </Link>
+              </li>
+            </ul>
+        </div>
+    </div>
+  </nav>
+   
   );
 }
 
